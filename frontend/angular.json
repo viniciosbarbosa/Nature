@@ -32,7 +32,10 @@
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/scss/styles.scss",
-              "src/scss/_variaveis.scss"
+              "src/scss/_variaveis.scss",
+              "src/scss/_mixin.scss",
+              "src/scss/_grid.scss",
+              "src/scss/_cores.scss"
             ],
             "scripts": []
           },
