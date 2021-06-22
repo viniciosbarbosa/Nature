@@ -10,6 +10,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
 import { ProductComponent } from './views/product/product.component';
+import { ContactComponent } from './views/contact/contact.component';
+import { AboutUsComponent } from './views/about-us/about-us.component';
+import { BlogComponent } from './views/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { ProductComponent } from './views/product/product.component';
     NavComponent,
     HomeComponent,
     ProductComponent,
+    ContactComponent,
+    AboutUsComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,
