@@ -4,12 +4,21 @@
 @import "src/scss/_cores.scss";
 
 
-.teste1{
-  background: $aqua;
+
+.menuHome1{
+  margin-top: 3.7rem;
+  padding-top: 2%;
+  @include linear-gradient(180deg, $menuop 47%, $branco 142%);
   height: 70vh;
 }
 
-.teste2{
-  background: $azul;
+.menuHome2{
+  margin-top: 3.7rem;
+  padding-top: 2%;
+  @include linear-gradient(180deg, $menuop 47%, $branco 142%);
   height: 70vh;
+  @include device(mobile){
+    margin-top: 0rem;
+    @include linear-gradient(180deg, $menuop -182%, $branco 142%);
+  }
 }

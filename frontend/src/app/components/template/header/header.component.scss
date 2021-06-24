@@ -4,7 +4,7 @@
 @import "src/scss/_cores.scss";
 
 #menuLogo{
-    @include linear-gradient(180deg, #F1FEFE 47%, #fff 142%);
+    @include linear-gradient(180deg, #F1FEFE 100%, #fff 142%);
 }
 
 .imgNav{
