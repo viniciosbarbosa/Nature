@@ -1,0 +1,61 @@
+$font-1:'Libre Baskerville', serif;
+$font-2:'Libre Baskerville';
+
+
+@function em($pixel, $contexto : 16){
+    @return $pixel / $contexto + em;
+}
+
+//
+@mixin tipo-1($size){
+    font-family: $font-2;
+    @if $size == 16{
+        font-size: em(16);
+        line-height: em(1,5);
+        font-weight: 400;
+    }
+}
+
+@mixin tipo-2($size){
+    font-family: $font-1;
+    @if $size == 18{
+        font-size: em(18);
+        line-height: em(30,18);
+    }
+}
+
+@mixin tipo-3($size){
+    font-family: $font-1;
+    @if $size == 36{
+        font-size: em(36);
+        line-height: em(1,5);
+    }
+}
+
+@mixin tipo-4($size){
+    font-family: $font-1;
+    @if $size == 42{
+        font-size: em(42);
+        line-height: em(1);
+        font-weight: bold;
+    }
+}
+
+@mixin tipo-5($size){
+    font-family: $font-1;
+    @if $size == 56{
+        font-size: em(56);
+        line-height: em(1);
+        font-weight: bold;
+    }
+}
+
+@mixin box-shadow($shadow...){
+    -webkit-box-shadow:$shadow;
+    -moz-box-shadow:$shadow;
+    box-shadow: $shadow;
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+    background: linear-gradient($direction, $color-stops);
+  }

@@ -1,0 +1,26 @@
+@import "src/scss/_variaveis.scss";
+@import "src/scss/_grid.scss";
+@import "src/scss/_mixin.scss";
+@import "src/scss/_cores.scss";
+
+#menuLogo{
+    @include linear-gradient(180deg, #00dbd0 -179%, #fff 64%);
+}
+
+.imgNav{
+    width: 45px;
+}
+
+.menuimg{
+    @include tipo-4(42);
+    color :$azul;
+    text-decoration: none;
+    margin-bottom: 5px;
+    margin-left: 7px;
+}
+
+.nav-link{
+    @include tipo-1(16);
+    color :$azul;
+    text-transform: capitalize;
+}
