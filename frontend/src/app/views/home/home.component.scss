@@ -4,21 +4,116 @@
 @import "src/scss/_cores.scss";
 
 
-
+.section1{
+  @include linear-gradient(180deg, $menuop 47%, $branco 142%);
+  height: 108vh;
+  overflow: hidden;
+  @include device(mobile){
+    height: 130vh;
+  }
+}
 .menuHome1{
   margin-top: 3.7rem;
   padding-top: 2%;
-  @include linear-gradient(180deg, $menuop 47%, $branco 142%);
-  height: 70vh;
+
+  height: auto;
 }
 
 .menuHome2{
   margin-top: 3.7rem;
   padding-top: 2%;
-  @include linear-gradient(180deg, $menuop 47%, $branco 142%);
-  height: 70vh;
+
+  height: auto;
   @include device(mobile){
     margin-top: 0rem;
-    @include linear-gradient(180deg, $menuop -182%, $branco 142%);
+
   }
 }
+
+.conteudoMenu{
+  height: auto;
+  @include p-m-padrao;
+  margin-top: 5.5rem;
+  @include device(table){
+    margin-top: 3.5rem;
+  }
+
+  @include device(mobile){
+    margin-top: 3.5rem;
+  }
+}
+
+.title{
+  @include marginupdown;
+  @include basic;
+  @include tipo-3(36);
+  @include device (table){
+    @include tipo-6(24);
+  }
+  color: $azul;
+  display: block;
+  line-height: 1;
+}
+
+.titleHiper{
+
+  @include basic;
+  @include tipo-5(56);
+
+
+  @include device(large){
+    @include marginupdown;
+  }
+  @include device (table){
+    @include tipo-4(36);
+    line-height: 1;
+  }
+  color: $azul;
+  display: block;
+  line-height: 1;
+}
+
+.conteudospan{
+  @include marginupdown;
+  @include basic;
+  @include tipo-1(16);
+  display: contents;
+}
+
+.btnEx{
+  margin-top: 15px;
+  display: block;
+  @include marginupdown;
+  @include btnsection1;
+}
+
+
+.imgmenu1{
+z-index: 0;
+max-width: 100%;
+margin-top: 28%;
+margin-left: 18%;
+transform: rotateZ(-9deg);
+overflow: hidden;
+}
+.imgmenu2{
+  z-index: -1;
+  max-width: 66%;
+  margin-top: 36%;
+  margin-left: -12%;
+  overflow: hidden;
+}
+
+.imgmenu3{
+  max-width: 75%;
+  margin-left: 17%;
+}
+
+.floral1{
+  position: absolute;
+}
+
+.floralsub{
+  overflow: hidden;
+}
+

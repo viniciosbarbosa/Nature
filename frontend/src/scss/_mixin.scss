@@ -50,6 +50,15 @@ $font-2:'Libre Baskerville';
   }
 }
 
+@mixin tipo-6($size){
+  font-family: $font-1;
+  @if $size == 24{
+    font-size: em(24);
+    line-height: em(1);
+    font-weight: bold;
+  }
+}
+
 @mixin box-shadow($shadow...){
   -webkit-box-shadow:$shadow;
   -moz-box-shadow:$shadow;
@@ -60,12 +69,27 @@ $font-2:'Libre Baskerville';
   background: linear-gradient($direction, $color-stops);
 }
 
+@mixin basic {
+  text-align: left;
+  text-decoration: none;
+}
 
+@mixin marginupdown{
+  padding-bottom:5px ;
+}
+
+@mixin p-m-padrao{
+  padding:10px 10px 10px 30px;
+  @include device(table){
+    padding:10px 10px 10px 20px;
+  }
+  @include device(mobile){
+    padding:10px ;
+  }
+}
 
 @mixin menuli{
   margin-top: 10px;
-
-
   &:hover ,&:focus{
     border-bottom: 4px solid $aqua;
     transition-delay: 0.05s;
@@ -81,6 +105,7 @@ $font-2:'Libre Baskerville';
 }
   //btn menu
   @mixin btn-menu{
+    @include tipo-1(16);
     background: transparent;
     border-radius: 25px;
     border:2px solid $aqua;
@@ -113,6 +138,41 @@ $font-2:'Libre Baskerville';
       }
       @include device(mobile){
         margin-left: 0px;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+
+  @mixin btnsection1{
+    padding-top: 8px;
+    @include tipo-1(16);
+    background: $aqua;
+    border-radius: 15px;
+    text-align: center;
+    text-transform: capitalize;
+    color: $branco;
+    width: 8.5rem;
+    height: 2.5rem;
+    transition: 0.3s;
+    border: 2px solid transparent;
+
+    @include device(table){
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    @include device(mobile){
+      width: 100%;
+      margin-top: 10px;
+    }
+    &:hover,&:focus{
+      outline: none;
+      transform: scale(1.1);
+      @include device(table){
+        transform: scale(1.01);
+      }
+      @include device(mobile){
         transform: scale(1.05);
       }
     }

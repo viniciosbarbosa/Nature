@@ -30,7 +30,7 @@ import { BlogComponent } from './views/blog/blog.component';
     BrowserModule,
     AppRoutingModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
