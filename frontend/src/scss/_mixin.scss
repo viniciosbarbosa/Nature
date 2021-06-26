@@ -11,7 +11,7 @@ $font-2:'Libre Baskerville';
   font-family: $font-2;
   @if $size == 16{
     font-size: em(16);
-    line-height: em(1,5);
+    line-height: 1,5;
     font-weight: 400;
   }
 }
@@ -70,7 +70,6 @@ $font-2:'Libre Baskerville';
 }
 
 @mixin basic {
-  text-align: left;
   text-decoration: none;
 }
 
@@ -78,10 +77,26 @@ $font-2:'Libre Baskerville';
   padding-bottom:5px ;
 }
 
+@mixin margintext{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 @mixin p-m-padrao{
   padding:10px 10px 10px 30px;
   @include device(table){
     padding:10px 10px 10px 20px;
+  }
+  @include device(mobile){
+    padding:10px ;
+  }
+}
+
+
+@mixin p-m-padraocols{
+  padding:20px 10px 35px 30px;
+  @include device(table){
+    padding:10px 10px 20px 20px;
   }
   @include device(mobile){
     padding:10px ;
@@ -103,97 +118,151 @@ $font-2:'Libre Baskerville';
     }
   }
 }
-  //btn menu
-  @mixin btn-menu{
-    @include tipo-1(16);
-    background: transparent;
-    border-radius: 25px;
-    border:2px solid $aqua;
-    text-align: center;
-    text-transform: capitalize;
-    color: $aqua;
-    width: 8.5rem;
-    height: 2.5rem;
-    text-decoration: none;
-    @include device(table){
-      width: 100%;
-      margin-top: 10px;
-    }
 
-    @include device(mobile){
-      width: 100%;
-      margin-top: 10px;
-    }
-
-    &:hover,&:focus{
-      background: $aqua;
-      color:$branco;
-      outline: none;
-      transition: 0.3s;
-      transform: scale(1.1);
-      margin-left: 10px;
-      @include device(table){
-        margin-left: 0px;
-        transform: scale(1.01);
-      }
-      @include device(mobile){
-        margin-left: 0px;
-        transform: scale(1.05);
-      }
-    }
+@mixin btn-menu{
+  @include tipo-1(16);
+  background: transparent;
+  border-radius: 25px;
+  border:2px solid $aqua;
+  text-align: center;
+  text-transform: capitalize;
+  color: $aqua;
+  width: 8.5rem;
+  height: 2.5rem;
+  text-decoration: none;
+  @include device(table){
+    width: 100%;
+    margin-top: 10px;
   }
 
+  @include device(mobile){
+    width: 100%;
+    margin-top: 10px;
+  }
 
-  @mixin btnsection1{
-    padding-top: 8px;
-    @include tipo-1(16);
+  &:hover,&:focus{
     background: $aqua;
-    border-radius: 15px;
-    text-align: center;
-    text-transform: capitalize;
-    color: $branco;
-    width: 8.5rem;
-    height: 2.5rem;
+    color:$branco;
+    outline: none;
     transition: 0.3s;
-    border: 2px solid transparent;
-
+    transform: scale(1.1);
+    margin-left: 10px;
     @include device(table){
-      width: 100%;
-      margin-top: 10px;
+      margin-left: 0px;
+      transform: scale(1.01);
     }
-
     @include device(mobile){
-      width: 100%;
-      margin-top: 10px;
-    }
-    &:hover,&:focus{
-      outline: none;
-      transform: scale(1.1);
-      @include device(table){
-        transform: scale(1.01);
-      }
-      @include device(mobile){
-        transform: scale(1.05);
-      }
+      margin-left: 0px;
+      transform: scale(1.05);
     }
   }
+}
 
 
-  @mixin scrollbar{
-    ::-webkit-scrollbar {
-      width: 10px;
+@mixin btnsection1{
+  padding-top: 8px;
+  @include tipo-1(16);
+  background: $aqua;
+  border-radius: 15px;
+  text-align: center;
+  text-transform: capitalize;
+  color: $branco;
+  width: 8.5rem;
+  height: 2.5rem;
+  transition: 0.3s;
+  border: 2px solid transparent;
+
+  @include device(table){
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  @include device(mobile){
+    width: 100%;
+    margin-top: 10px;
+  }
+  &:hover,&:focus{
+    outline: none;
+    transform: scale(1.1);
+    @include device(table){
+      transform: scale(1.01);
     }
-
-    ::-webkit-scrollbar-track {
-      background: #F1FEFE;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: #374B5C;
-      border-radius:10px
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: #324352;;
+    @include device(mobile){
+      transform: scale(1.05);
     }
   }
+}
+
+
+@mixin scrollbar{
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F1FEFE;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #374B5C;
+    border-radius:10px
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #324352;;
+  }
+}
+
+@mixin alignImg{
+  text-align: center;
+}
+
+@mixin tamanhoimg{
+  width: 3.5rem;
+}
+
+@mixin gridFood{
+  border: 2px dashed $cinza;
+  border-radius: 20px;
+  background:transparent;
+  padding:0.75rem;
+  .imgCard2{
+    display: none;
+  }
+
+  .titleimg{
+    @include tipo-2(18);
+    color: $azul;
+    display: block;
+    @include alignImg;
+  }
+
+  .subtitleimg{
+    @include tipo-1(16);
+    color: $azul;
+    display: block;
+    @include alignImg;
+  }
+
+  &:hover,&focus{
+    outline: none;
+    border:none;
+    background:$aqua;
+    padding:0.75rem;
+    transition: 1.0s;
+    .imgCard {
+      display: none;
+    }
+    .imgCard2{
+      display: initial;
+    }
+    .titleimg , .subtitleimg{
+     color: $branco;
+    }
+  }
+}
+
+@mixin baciahover{
+  background-color: $branco;
+}
+
