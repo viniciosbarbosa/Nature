@@ -159,4 +159,23 @@ overflow: hidden;
 @include gridFood;
 }
 
+.section3{
+  background:$verdeclaro;
+  height: auto;
+  @include p-m-padraocols;
+}
+
+.imgCarrosel{
+  height: 6.25rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  &:hover,&:focus{
+    transform: scale(1.1);
+    transition: 0.3s;
+    @include device (mobile){
+      transform: scale(1.05)
+    }
+  }
+}
+
 
