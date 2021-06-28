@@ -89,12 +89,12 @@
 
 
 .imgmenu1{
-z-index: 0;
-max-width: 100%;
-margin-top: 25%;
-margin-left: 18%;
-transform: rotateZ(-9deg);
-overflow: hidden;
+  z-index: 0;
+  max-width: 100%;
+  margin-top: 25%;
+  margin-left: 18%;
+  transform: rotateZ(-9deg);
+  overflow: hidden;
 }
 .imgmenu2{
   z-index: -1;
@@ -156,7 +156,7 @@ overflow: hidden;
 }
 
 .food{
-@include gridFood;
+  @include gridFood;
 }
 
 .section3{
@@ -176,6 +176,118 @@ overflow: hidden;
       transform: scale(1.05)
     }
   }
+}
+
+.section4{
+  background: $branco;
+  height: 100vh;
+  overflow: hidden;
+  @include p-m-padraocols;
+  @include device(mobile){
+    height: auto;
+  }
+}
+
+.bgleft{
+  width: 45rem;
+  margin-left: -26rem;
+  margin-top: 3rem;
+  position: absolute;
+  @include device(table){
+    margin-left: -35rem;
+  }
+  @include device (mobile){
+    width: 40rem;
+    position: initial;
+    margin-top: -9rem;
+  }
+}
+
+.contentC{
+  @include p-m-padraocols;
+  @include device(large){
+    padding-top: 75px !important;
+  }
+}
+
+.iconCenter{
+  @include alignImg;
+}
+
+.iconFolhas{
+  width: 40px !important;
+  margin-left:calc(100% - 53.5%);
+  @include device(table){
+    margin-left:calc(100% - 57%)
+  }
+
+  @include device(mobile){
+    margin-left: 11.7rem;
+  }
+}
+
+.nametxt{
+  @include tipo-6(24);
+  @include alignImg;
+  color: $azul;
+  margin-bottom: 2rem;
+  &:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+}
+
+.txt_persona{
+  @include tipo-1(16);
+  @include alignImg;
+  color: $azul;
+  margin-top: 1rem;
+  &:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+  }
+}
+
+.starsdiv{
+  margin-left: calc(100% - 58.5%);
+  @include device(table){
+    margin-left: calc(100% - 71.5%);
+  }@include device(mobile){
+    margin-left: calc(100% - 62.5%);
+  }
+
+}
+
+.stars{
+  width: 20px !important;
+  &:hover{
+    transform: scale(1.5);
+    transition: 0.3s;
+  }
+}
+
+
+
+.bgright{
+  width: 42rem;
+  margin-top: -1rem;
+  @include device(table){
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+
+  @include device(mobile){
+    width: 40rem;
+    margin-top: -1rem;
+    margin-left: 13rem;
+    margin-bottom: -10rem;
+  }
+}
+
+.section5{
+  background: $verdeclaro;
+  height: 70vh;
+  @include p-m-padraocols
 }
 
 

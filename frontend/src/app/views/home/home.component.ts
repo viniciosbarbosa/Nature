@@ -40,4 +40,30 @@ export class HomeComponent implements OnInit {
     },
     nav: false,
   }
+
+  slider: OwlOptions = {
+    loop: false,
+    mouseDrag: true,
+    touchDrag: false,
+    pullDrag: false,
+    dots:true,
+    autoplay:false,
+    navSpeed: 350,
+    navText: [ "" ,""],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 1
+      },
+      940: {
+        items: 1
+      }
+    },
+    nav: false,
+  }
 }
