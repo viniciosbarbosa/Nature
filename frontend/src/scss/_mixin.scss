@@ -107,7 +107,10 @@ $font-2:'Libre Baskerville';
   margin-top: 10px;
   &:hover ,&:focus{
     border-bottom: 4px solid $aqua;
-    transition-delay: 0.05s;
+    transform: 0.3s;
+    transform: scale(1.05);
+
+
     @include device(table){
       border-bottom: 0px solid $aqua;
       transform: scale(1.05);
