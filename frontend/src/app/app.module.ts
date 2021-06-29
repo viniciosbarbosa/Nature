@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +11,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
 import { ProductComponent } from './views/product/product.component';
+import { ContactComponent } from './views/contact/contact.component';
+import { AboutUsComponent } from './views/about-us/about-us.component';
+import { BlogComponent } from './views/blog/blog.component';
+
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -19,12 +25,19 @@ import { ProductComponent } from './views/product/product.component';
     NavComponent,
     HomeComponent,
     ProductComponent,
+    ContactComponent,
+    AboutUsComponent,
+    BlogComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    CarouselModule,
+    BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

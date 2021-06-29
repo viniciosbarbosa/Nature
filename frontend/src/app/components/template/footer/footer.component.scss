@@ -1,0 +1,98 @@
+@import "src/scss/_variaveis.scss";
+@import "src/scss/_grid.scss";
+@import "src/scss/_mixin.scss";
+@import "src/scss/_cores.scss";
+
+
+
+.footer{
+  background-image: url("../../../../assets/img/footer.svg");
+  background-size: cover;
+  height: auto;
+  @include p-m-padraocols;
+  padding-top: 5rem;
+
+  @include device (table){
+    padding: 3.5rem 10px 10px 10px;
+  }
+
+  @include device (mobile){
+    padding: 5.5rem 10px 10px 10px;
+  }
+}
+
+.imgfooter{
+  max-width: 100%;
+  display: inline-block;
+  &:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+
+}
+
+.title{
+  @include tipo-3(36);
+  color :$branco;
+  margin-top: 10px;
+  display: inline-block;
+  margin-top: 1rem;
+  @include device (table){
+    margin-top: 2.5rem;
+  }
+
+  @include device (mobile){
+    margin-top: 5px;
+  }
+}
+
+.subtitle ,.cop{
+  @include tipo-1(16);
+  color :$branco;
+  display: block;
+}
+
+hr{
+  border: 2px solid $aqua;
+  margin-right: 80%
+}
+
+.info{
+  @include tipo-1(16);
+  color:$branco;
+  font-weight: bold;
+}
+
+ul{
+  list-style: none;
+  padding: 0px;
+
+  li{
+    @include tipo-1(16);
+    color:$branco;
+    padding-bottom: 5px;
+    a{
+      @include basic;
+      color:$branco;
+    }&:hover{
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+  }
+
+}
+
+.lilest{
+  padding-left: 2rem;
+  @include device(table){
+    padding-left: 0rem;
+  }
+
+  @include device(mobile){
+    padding-left: 0rem;
+  }
+}
+
+.lilest2{
+padding: none;
+}

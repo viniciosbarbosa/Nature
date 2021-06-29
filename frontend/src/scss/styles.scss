@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import "_variaveis.scss";
-html, body { height: 100%; }
+@import "_grid.scss";
+@import "_mixin.scss";
+@import "_cores.scss";
+html, body { height: 100%; background-color: $verdeclaro;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+
+@include scrollbar;
+html{
+  scroll-behavior: smooth;
+}

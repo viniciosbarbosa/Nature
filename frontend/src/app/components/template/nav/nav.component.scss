@@ -1,0 +1,8 @@
+@import "src/scss/_variaveis.scss";
+@import "src/scss/_grid.scss";
+@import "src/scss/_mixin.scss";
+@import "src/scss/_cores.scss";
+
+body{
+  @include scrollbar;
+}

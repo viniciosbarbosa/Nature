@@ -1,0 +1,331 @@
+$font-1:'Libre Baskerville', serif;
+$font-2:'Libre Baskerville';
+
+
+@function em($pixel, $contexto : 16){
+  @return $pixel / $contexto + em;
+}
+
+//
+@mixin tipo-1($size){
+  font-family: $font-2;
+  @if $size == 16{
+    font-size: em(16);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
+
+@mixin tipo-2($size){
+  font-family: $font-1;
+  @if $size == 18{
+    font-size: em(18);
+    line-height: em(30,18);
+  }
+}
+
+@mixin tipo-3($size){
+  font-family: $font-1;
+  @if $size == 36{
+    font-size: em(36);
+    line-height: 1;
+  }
+}
+
+@mixin tipo-4($size){
+  font-family: $font-1;
+  @if $size == 42{
+    font-size: em(42);
+    line-height: em(1);
+    font-weight: bold;
+  }
+}
+
+@mixin tipo-5($size){
+  font-family: $font-1;
+  @if $size == 56{
+    font-size: em(56);
+    line-height: em(1);
+    font-weight: bold;
+  }
+}
+
+@mixin tipo-6($size){
+  font-family: $font-1;
+  @if $size == 24{
+    font-size: em(24);
+    line-height: em(1);
+    font-weight: bold;
+  }
+}
+
+@mixin box-shadow($shadow...){
+  -webkit-box-shadow:$shadow;
+  -moz-box-shadow:$shadow;
+  box-shadow: $shadow;
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: linear-gradient($direction, $color-stops);
+}
+
+@mixin basic {
+  text-decoration: none;
+}
+
+@mixin marginupdown{
+  padding-bottom:5px ;
+}
+
+@mixin margintext{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@mixin p-m-padrao{
+  padding:10px 10px 10px 30px;
+  @include device(table){
+    padding:10px 10px 10px 20px;
+  }
+  @include device(mobile){
+    padding:10px ;
+  }
+}
+
+
+@mixin p-m-padraocols{
+  padding:20px 10px 35px 30px;
+  @include device(table){
+    padding:10px 10px 20px 20px;
+  }
+  @include device(mobile){
+    padding:10px ;
+  }
+}
+
+@mixin menuli{
+  margin-top: 10px;
+  &:hover ,&:focus{
+    border-bottom: 4px solid $aqua;
+    transform: 0.3s;
+    transform: scale(1.05);
+
+
+    @include device(table){
+      border-bottom: 0px solid $aqua;
+      transform: scale(1.05);
+    }
+    @include device(mobile){
+      border-bottom: 0px solid $aqua;
+      transform: scale(1.01);
+    }
+  }
+}
+
+@mixin btn-menu{
+  @include tipo-1(16);
+  background: transparent;
+  border-radius: 25px;
+  border:2px solid $aqua;
+  text-align: center;
+  text-transform: capitalize;
+  color: $aqua;
+  width: 8.5rem;
+  height: 2.5rem;
+  text-decoration: none;
+  @include device(table){
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  @include device(mobile){
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  &:hover,&:focus{
+    background: $aqua;
+    color:$branco;
+    outline: none;
+    transition: 0.3s;
+    transform: scale(1.1);
+    margin-left: 10px;
+    @include device(table){
+      margin-left: 0px;
+      transform: scale(1.01);
+    }
+    @include device(mobile){
+      margin-left: 0px;
+      transform: scale(1.05);
+    }
+  }
+}
+
+
+@mixin btnsection1{
+  padding-top: 6px;
+  @include tipo-1(16);
+  background: $aqua;
+  border-radius: 15px;
+  text-align: center;
+  text-transform: capitalize;
+  color: $branco;
+  width: 8.5rem;
+  height: 2.5rem;
+  transition: 0.3s;
+  border: 2px solid transparent;
+
+  @include device(table){
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  @include device(mobile){
+    width: 100%;
+    margin-top: 10px;
+  }
+  &:hover,&:focus{
+    outline: none;
+    transform: scale(1.1);
+    @include device(table){
+      transform: scale(1.01);
+    }
+    @include device(mobile){
+      transform: scale(1.05);
+    }
+  }
+}
+
+
+@mixin scrollbar{
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @include linear-gradient(180deg, $menuop 47%, $branco 80%);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #374B5C;
+    border-radius:10px
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #324352;;
+  }
+}
+
+@mixin alignImg{
+  text-align: center;
+}
+
+@mixin tamanhoimg{
+  width: 3.5rem;
+}
+
+@mixin gridFood{
+  border: 2px dashed $cinza;
+  border-radius: 20px;
+  background:transparent;
+  padding:0.75rem;
+  .imgCard2{
+    display: none;
+  }
+
+  .titleimg{
+    @include tipo-2(18);
+    color: $azul;
+    display: block;
+    @include alignImg;
+  }
+
+  .subtitleimg{
+    @include tipo-1(16);
+    color: $azul;
+    display: block;
+    @include alignImg;
+  }
+
+  &:hover,&focus{
+    outline: none;
+    border:none;
+    background:$aqua;
+    padding:0.75rem;
+    transition: 1.0s;
+    transform: scale(1.05);
+    .imgCard {
+      display: none;
+    }
+    .imgCard2{
+      display: initial;
+    }
+    .titleimg , .subtitleimg{
+     color: $branco;
+    }
+  }
+}
+
+@mixin baciahover{
+  background-color: $branco;
+}
+
+@mixin btnInput{
+  padding-top: 2px;
+  @include tipo-1(16);
+  background: $aqua;
+  border-radius: 25px;
+  text-align: center;
+  text-transform: capitalize;
+  color: $branco;
+  width: 8.5rem;
+  height: 3rem;
+  transition: 0.3s;
+  border: 2px solid transparent;
+  &:hover,&:focus{
+    outline: none;
+    transform: scale(1.01);
+    @include device(table){
+      transform: scale(1.01);
+    }
+    @include device(mobile){
+      transform: scale(1.01);
+    }
+  }
+}
+
+
+@mixin marginblog{
+  margin: 10px;
+}
+
+@mixin btntop{
+  color: $branco;
+  width: 50px;
+  height: 50px;
+  right: 15px;
+  bottom: 30px;
+  border-radius: 25px;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  border: 2px solid $aqua;
+  background: $branco;
+  display: initial;
+  transition: 0.5s;
+  &::before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 6px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $aqua;
+  }&:hover,&:focus{
+    outline: none;
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+}
