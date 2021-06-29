@@ -286,7 +286,7 @@
 
 .section5{
   background: $verdeclaro;
-  height: 170vh;
+  height: auto;
   @include p-m-padraocols
 }
 
@@ -339,3 +339,70 @@
 .btnsec5{
   @include btnInput
 }
+
+.algnS{
+  text-align: center;
+}
+
+.readTitle{
+  display: block;
+  @include tipo-3(36);
+  color: $azul;
+}
+
+.readSub{
+  display: block;
+  @include tipo-1(16);
+  color: $azul;
+}
+
+
+
+.products{
+  @include marginblog;
+  height: auto;
+  background:$branco;
+  border-top-left-radius: 29px;
+  border-top-right-radius: 29px;
+  &:hover,&:focus{
+    transition: 0.3s;
+    transform: scale(1.03);
+    border: 2px solid $aqua;
+  }
+}
+
+.imgblog{
+  width: 100%;
+}
+
+.blogTitle{
+  @include tipo-2(18);
+  line-height: 1.5;
+  color: $aqua;
+  padding:10px;
+  @include alignImg;
+  display: block;
+  &:hover,&:focus{
+    transition: 0.3s;
+    transform: scale(1.05);
+  }
+}
+
+.blogContent,.blogSub{
+  @include tipo-1(16);
+  padding:7px;
+  line-height: 1.5;
+  color: $azul;
+  @include alignImg;
+  display: block;
+  &:hover,&:focus{
+    transition: 0.3s;
+    transform: scale(1.05);
+  }
+}
+
+.blogs{
+  overflow: hidden;
+  height: 80vh;
+}
+

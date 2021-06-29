@@ -3,6 +3,6 @@
 @import "_grid.scss";
 @import "_mixin.scss";
 @import "_cores.scss";
-html, body { height: 100%; }
+html, body { height: 100%; background-color: $verdeclaro;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 

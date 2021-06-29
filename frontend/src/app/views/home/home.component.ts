@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-home',
@@ -42,12 +43,12 @@ export class HomeComponent implements OnInit {
   }
 
   slider: OwlOptions = {
-    loop: false,
+    loop: true,
     mouseDrag: true,
     touchDrag: false,
     pullDrag: false,
     dots:true,
-    autoplay:false,
+    autoplay:true,
     navSpeed: 350,
     navText: [ "" ,""],
     responsive: {
@@ -66,4 +67,27 @@ export class HomeComponent implements OnInit {
     },
     nav: false,
   }
+
+  showModal(){
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong!',
+      footer: '<a href="">Why do I have this issue?</a>'
+    })
+  }
+
+  /*para usar no teste seria
+    <p>{{text.id.description}}</p>
+
+    se da criar um outro .ts para export se sim como depois chamar no html
+  */
+
+  text = [
+    {
+      id:"1",
+      description:"teste testando testosoo",
+    }
+  ]
+
 }
