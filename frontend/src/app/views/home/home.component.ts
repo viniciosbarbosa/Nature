@@ -70,10 +70,10 @@ export class HomeComponent implements OnInit {
 
   showModal(){
     Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Something went wrong!',
-      footer: '<a href="">Why do I have this issue?</a>'
+      position: 'center',
+      icon: 'success',
+      title: 'Confirmado você receberá em sua caixa de entrada',
+      showConfirmButton: true,
     })
   }
 
