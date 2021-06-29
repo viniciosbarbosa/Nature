@@ -28,7 +28,7 @@ $font-2:'Libre Baskerville';
   font-family: $font-1;
   @if $size == 36{
     font-size: em(36);
-    line-height: em(1,5);
+    line-height: 1;
   }
 }
 
@@ -160,7 +160,7 @@ $font-2:'Libre Baskerville';
 
 
 @mixin btnsection1{
-  padding-top: 8px;
+  padding-top: 6px;
   @include tipo-1(16);
   background: $aqua;
   border-radius: 15px;
@@ -265,5 +265,29 @@ $font-2:'Libre Baskerville';
 
 @mixin baciahover{
   background-color: $branco;
+}
+
+@mixin btnInput{
+  padding-top: 2px;
+  @include tipo-1(16);
+  background: $aqua;
+  border-radius: 25px;
+  text-align: center;
+  text-transform: capitalize;
+  color: $branco;
+  width: 8.5rem;
+  height: 3rem;
+  transition: 0.3s;
+  border: 2px solid transparent;
+  &:hover,&:focus{
+    outline: none;
+    transform: scale(1.01);
+    @include device(table){
+      transform: scale(1.01);
+    }
+    @include device(mobile){
+      transform: scale(1.01);
+    }
+  }
 }
 

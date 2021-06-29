@@ -286,8 +286,55 @@
 
 .section5{
   background: $verdeclaro;
-  height: 70vh;
+  height: 170vh;
   @include p-m-padraocols
 }
 
+.titleS5{
+  display: block;
+  @include tipo-3(36);
+  @include alignImg;
+  color: $azul;
 
+}
+
+.subtitleS5{
+  display: block;
+  @include tipo-1(16);
+  @include alignImg;
+  color: $azul;
+}
+
+.txtinput{
+  text-align: center;
+}
+
+.email{
+  margin-top: 5rem;
+}
+
+.input{
+  margin-right: -1rem;
+  border: none;
+  width: 17rem;
+  height: 2rem;
+  color: $cinza-escuro;
+  @include tipo-1(16);
+  font-weight: bold;
+
+  &::placeholder{
+    color: $cinza-escuro;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &:hover,&:focus{
+    outline: none;
+    transition: 0.3s;
+  }
+}
+
+
+.btnsec5{
+  @include btnInput
+}
