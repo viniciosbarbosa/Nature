@@ -5,7 +5,7 @@
 
 
 .section1{
-  @include linear-gradient(180deg, $menuop 47%, $branco 142%);
+  @include linear-gradient(180deg, $menuop 47%, $branco 80%);
   height: auto;
   overflow: hidden;
   @include device(mobile){
@@ -388,6 +388,7 @@
   }
 }
 
+
 .blogContent,.blogSub{
   @include tipo-1(16);
   padding:7px;
@@ -403,6 +404,14 @@
 
 .blogs{
   overflow: hidden;
-  height: 80vh;
+  @include device(large){
+    height: 80vh;
+  }
+  height: auto;
 }
+
+#top{
+  @include btntop;
+}
+
 

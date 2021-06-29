@@ -203,7 +203,7 @@ $font-2:'Libre Baskerville';
   }
 
   ::-webkit-scrollbar-track {
-    background: #F1FEFE;
+    @include linear-gradient(180deg, $menuop 47%, $branco 80%);
   }
 
   ::-webkit-scrollbar-thumb {
@@ -297,4 +297,35 @@ $font-2:'Libre Baskerville';
 
 @mixin marginblog{
   margin: 10px;
+}
+
+@mixin btntop{
+  color: $branco;
+  width: 50px;
+  height: 50px;
+  right: 15px;
+  bottom: 30px;
+  border-radius: 25px;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  border: 2px solid $aqua;
+  background: $branco;
+  display: initial;
+  transition: 0.5s;
+  &::before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 6px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $aqua;
+  }&:hover,&:focus{
+    outline: none;
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
 }
