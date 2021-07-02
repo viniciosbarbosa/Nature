@@ -1,6 +1,6 @@
 Projeto Nature em Desenvolvimento 
 
-Angular 9 - T.S - SASS - OWL Carrossel 
+Angular 9 - T.S - SASS - OWL Carrossel  - DATA AOS Animatie 
 
 <a href="https://ibb.co/QvcZnL2"><img src="https://i.ibb.co/PGYR4K7/nature-Home.jpg" alt="nature-Home" border="0"></a>
 <a href="https://ibb.co/jW3XV96"><img src="https://i.ibb.co/9Vy5wm8/nature-Home2.jpg" alt="nature-Home2" border="0"></a>
