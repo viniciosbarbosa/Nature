@@ -1,4 +1,4 @@
-Projeto Nature em Desenvolvimento 
+Projeto Organic em Desenvolvimento 
 
 Angular 9 - T.S - SASS - OWL Carrossel  - DATA AOS Animate
 
